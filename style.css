@@ -1,34 +1,23 @@
 *{
-    font-family: sans-serif;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: Anek;
 }
 
+@font-face {
+    font-family: Anek;
+    src: url(../fonts/fonte.ttf)
+  }
+
 body{
-    background-color: black;
+    background-image: linear-gradient(white, grey);
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.logo{
-    max-width: 600px;
-    margin-bottom: 24px;
-
-}
-
-.container-input{
-    max-width: 480px;
-    margin: 14px 0;
-}
-
-.container-input span{
-    color: white;
-    font-size: 22px;
 }
 
 .slider{
@@ -38,7 +27,7 @@ body{
     background: white;
     height: 18px;
     outline: none;
-    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .button-cta{
@@ -58,8 +47,10 @@ body{
     margin: 14px 0;
     display: flex;
     align-items: center;
+    background-color: #12bcfe;
     flex-direction: column;
-    cursor: pointer;
+    position: relative;
+    
 }
 
 .title{
@@ -74,6 +65,7 @@ body{
     height: 60px;
     background-color: black;
     border-radius: 4px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +91,107 @@ body{
     transition: all 0.5s ease-in-out;
 }
 
+.hide{
+    display: none;
+}
+
 .container-password:hover .tooltip{
     visibility: visible;
     bottom: 50px;
     opacity: 1;
+}
+
+.titulogerador{
+    color: aliceblue;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 40px;
+
+}
+
+.container-input{
+    max-width: 480px;
+    max-height: fit-content;
+    margin: auto;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    overflow: hidden;
+    
+  
+}
+
+.container-back{
+    padding: 30px 30px 30px 30px;
+    height: fit-content;
+}
+
+
+.container-input div, span{
+    background-color: black;
+    font-size: 22px;
+    position: relative;
+}
+
+
+
+
+.container-input::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 300%;
+    background: linear-gradient(110deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+ 
+    border-radius: inherit;
+
+}
+
+.botao{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: auto;
+    padding: 3px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    width:  50%;
+}
+
+.botao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(110deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    background-size: 50% 100%;
+    
+}
+
+.botao span{
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao:hover::before{
+    animation: borderAnimate 0.85s linear infinite;
+}
+
+@keyframes borderAnimate {
+    to{
+        transform: translateX(-50%);
+    }
+    
 }
