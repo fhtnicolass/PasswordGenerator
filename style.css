@@ -113,10 +113,9 @@ body{
     max-width: 480px;
     max-height: fit-content;
     margin: auto;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 5px;
     position: absolute;
-    background-color: black;
     border-radius: 5px;
     overflow: hidden;
     
@@ -126,6 +125,7 @@ body{
 .container-back{
     padding: 30px 30px 30px 30px;
     height: fit-content;
+    border-radius: 8px;
 }
 
 
